@@ -47,6 +47,8 @@ MCP_DISCOVERY_HEADERS = {
     "MCP-Protocol-Version": "2025-03-26",
 }
 
+EXAMPLE_URL = "http://example/sse"
+
 
 @dataclass
 class OAuthConfig:
@@ -185,6 +187,7 @@ class ModelContextProtocolConfigFlow(AbstractOAuth2FlowHandler, domain=DOMAIN):
             step_id="user",
             data_schema=STEP_USER_DATA_SCHEMA,
             errors=errors,
+            description_placeholders={"example_url": EXAMPLE_URL},
         )
 
     async def async_step_auth_discovery(
