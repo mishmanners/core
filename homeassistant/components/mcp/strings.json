@@ -6,7 +6,7 @@
           "url": "[%key:common::config_flow::data::url%]"
         },
         "data_description": {
-          "url": "The remote MCP server URL for the SSE endpoint, for example {example_url}"
+          "url": "The remote MCP server URL for the SSE endpoint"
         }
       },
       "credentials_choice": {
